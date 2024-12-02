@@ -1,0 +1,114 @@
+canvas {
+    border: 1px solid black;
+    touch-action: none; /* タッチイベントのデフォルト動作を無効化 */
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.color-toolbar, .brush-toolbar {
+    display: flex;
+    margin-top: 5px;
+}
+
+.color-button, .brush-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brush-button {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ccc;
+    background-color: white;
+    border-radius: 15px;
+    margin: 8px;
+}
+
+.brush-dot {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.brush-dot.small {
+    width: 10px;
+    height: 10px;
+}
+
+.brush-dot.medium {
+    width: 25px;
+    height: 25px;
+}
+
+.brush-dot.large {
+    width: 40px;
+    height: 40px;
+}
+
+.brush-button:hover {
+    background-color: #f0f0f0;
+    border-color: #666;
+}
+
+.brush-button:active {
+    background-color: #e0e0e0;
+}
+
+/* 現在選択されているブラシを示す */
+.brush-button.selected {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.clear-button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+.reset-button {
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.eraser-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.brush-button.eraser.selected {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}

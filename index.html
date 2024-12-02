@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お絵描きアプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+       
+        <input type="file" id="imageLoader" name="imageLoader" accept="image/*" />
+        <div class="color-toolbar">
+            <button class="color-button" style="background-color: red;" onclick="changeColor('red')"></button>
+            <button class="color-button" style="background-color: blue;" onclick="changeColor('blue')"></button>
+            <button class="color-button" style="background-color: green;" onclick="changeColor('green')"></button>
+            <button class="color-button" style="background-color: yellow;" onclick="changeColor('yellow')"></button>
+            <button class="color-button" style="background-color: orange;" onclick="changeColor('orange')"></button>
+            <button class="color-button" style="background-color: purple;" onclick="changeColor('purple')"></button>
+            <button class="color-button" style="background-color: pink;" onclick="changeColor('pink')"></button>
+            <button class="color-button" style="background-color: brown;" onclick="changeColor('brown')"></button>
+            <button class="color-button" style="background-color: black;" onclick="changeColor('black')"></button>
+            <button class="color-button" style="background-color: gray;" onclick="changeColor('gray')"></button>
+        </div>
+        <div class="brush-toolbar">
+            <button class="brush-button" onclick="changeBrush(5)">
+                <div class="brush-dot small"></div>
+            </button>
+            <button class="brush-button" onclick="changeBrush(10)">
+                <div class="brush-dot medium"></div>
+            </button>
+            <button class="brush-button" onclick="changeBrush(20)">
+                <div class="brush-dot large"></div>
+            </button>
+            <button class="brush-button eraser" onclick="setEraser()">
+                <img src="eraser.png" alt="消しゴム" class="eraser-icon">
+            </button>
+        </div>
+    </div>
+    <canvas id="drawingCanvas" width="500" height="500"></canvas>
+    
+    <button class="clear-button" onclick="clearCanvas()">消去</button>
+    <button class="reset-button" onclick="resetCanvas()">白紙</button>
+    <script src="script.js"></script>
+</body>
+</html>
